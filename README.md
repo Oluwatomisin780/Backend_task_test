@@ -100,8 +100,9 @@ mutation {
   }
 }
 
-
 ```
+![login](https://github.com/user-attachments/assets/f9abe10d-1ac5-4eaf-b169-413745c26b1d)
+
 
 ### **2️⃣ Biometric Authentication**
 
@@ -112,6 +113,7 @@ mutation {
   }
 }
 ```
+  }![biometric](https://github.com/user-attachments/assets/5ddba17f-0fee-42b4-9a07-dfe60902f365)
 
 ### **3️⃣ Get Logged-in User**
 
@@ -121,9 +123,10 @@ query {
     id
     email
     username
-  }
+
 }
 ```
+![gtme](https://github.com/user-attachments/assets/12ed6693-755b-4e6e-a0b7-f865b0c0c909)
 
 🔹 Requires `Authorization: Bearer <JWT_TOKEN>` in the request header.
 
@@ -139,11 +142,12 @@ Run all unit tests:
 npm run test
 ```
 
-### **🌍 End-to-End (E2E) Tests**
+� End-to-End (E2E) Tests**
 
 ```bash
 npm run test:e2e
 ```
+### **�
 
 🔹 **Test Coverage**
 
