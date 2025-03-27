@@ -2,6 +2,7 @@
 
 A secure **authentication system** using **NestJS, GraphQL, Passport, JWT, and Prisma**. Supports **email/password login, biometric authentication**, and includes **E2E tests**.
 
+
 ---
 
 ## **📌 Features**
@@ -73,14 +74,33 @@ npm run start:dev
 
 ## **🔑 Authentication Flow**
 
+### **1️⃣ User CreateUser (Email & Password & biometrickey)**   
+ # biometrickey is optional 
+```graphql
+mutation {
+  creat(createUserInput: { email: "user@example.com", password: "password" ,  biometrickey: "something"}) {   
+    password
+    email
+    biometricKey
+  }
+}
+
+![creatUser](https://github.com/user-attachments/assets/36c29e7b-8de5-42fb-9dec-125e87a6d9be)
+ access_token
+```
+
+
+
 ### **1️⃣ User Login (Email & Password)**
 
 ```graphql
 mutation {
   login(loginAuthInput: { email: "user@example.com", password: "password" }) {
-    access_token
+   
   }
 }
+
+
 ```
 
 ### **2️⃣ Biometric Authentication**
