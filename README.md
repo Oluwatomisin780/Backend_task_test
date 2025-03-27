@@ -85,9 +85,9 @@ mutation {
   }
 }
 
-![creatUser](https://github.com/user-attachments/assets/36c29e7b-8de5-42fb-9dec-125e87a6d9be)
  access_token
 ```
+![creatUser](https://github.com/user-attachments/assets/36c29e7b-8de5-42fb-9dec-125e87a6d9be)
 
 
 
