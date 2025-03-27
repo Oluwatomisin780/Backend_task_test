@@ -2,6 +2,7 @@
 
 A secure **authentication system** using **NestJS, GraphQL, Passport, JWT, and Prisma**. Supports **email/password login, biometric authentication**, and includes **E2E tests**.
 
+
 ---
 
 ## **📌 Features**
@@ -73,15 +74,38 @@ npm run start:dev
 
 ## **🔑 Authentication Flow**
 
+### **1️⃣ User CreateUser (Email & Password & biometrickey)**   
+ # biometrickey is optional 
+```graphql
+mutation {
+  creat(createUserInput: { email: "user@example.com", password: "password" ,  biometrickey: "something"}) {   
+    password
+    email
+    biometricKey
+  }
+}
+
+```
+
+![createUser](https://github.com/user-attachments/assets/d64cb80f-793a-4d51-823c-d054a3c18cb2)
+
+
+
+
 ### **1️⃣ User Login (Email & Password)**
 
 ```graphql
 mutation {
   login(loginAuthInput: { email: "user@example.com", password: "password" }) {
     access_token
+   
   }
 }
+
 ```
+![login](https://github.com/user-attachments/assets/3b9d2445-a8de-46c7-aafc-c70895b7bee2)
+
+
 
 ### **2️⃣ Biometric Authentication**
 
@@ -92,6 +116,7 @@ mutation {
   }
 }
 ```
+  ![bio](https://github.com/user-attachments/assets/ea7230a9-ffd8-4f6c-887d-0bb4b781bf2a)
 
 ### **3️⃣ Get Logged-in User**
 
@@ -101,35 +126,25 @@ query {
     id
     email
     username
-  }
+
 }
 ```
+![gtme](https://github.com/user-attachments/assets/1544f875-62f7-4392-aaf9-3f28c9ee5071)
+
 
 🔹 Requires `Authorization: Bearer <JWT_TOKEN>` in the request header.
+
 
 ---
 
 ## **✅ Running Tests**
 
-### **🧚 Unit Tests**
-
-Run all unit tests:
-
-```bash
-npm run test
-```
-
-### **🌍 End-to-End (E2E) Tests**
+� End-to-End (E2E) Tests**
 
 ```bash
 npm run test:e2e
 ```
-
-🔹 **Test Coverage**
-
-```bash
-npm run test:cov
-```
+### **�
 
 ---
 
