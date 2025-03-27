@@ -85,9 +85,10 @@ mutation {
   }
 }
 
- access_token
 ```
-![creatUser](https://github.com/user-attachments/assets/36c29e7b-8de5-42fb-9dec-125e87a6d9be)
+
+![createUser](https://github.com/user-attachments/assets/d64cb80f-793a-4d51-823c-d054a3c18cb2)
+
 
 
 
@@ -96,12 +97,14 @@ mutation {
 ```graphql
 mutation {
   login(loginAuthInput: { email: "user@example.com", password: "password" }) {
+    access_token
    
   }
 }
 
 ```
-![login](https://github.com/user-attachments/assets/f9abe10d-1ac5-4eaf-b169-413745c26b1d)
+![login](https://github.com/user-attachments/assets/3b9d2445-a8de-46c7-aafc-c70895b7bee2)
+
 
 
 ### **2️⃣ Biometric Authentication**
@@ -113,7 +116,7 @@ mutation {
   }
 }
 ```
-  }![biometric](https://github.com/user-attachments/assets/5ddba17f-0fee-42b4-9a07-dfe60902f365)
+  ![bio](https://github.com/user-attachments/assets/ea7230a9-ffd8-4f6c-887d-0bb4b781bf2a)
 
 ### **3️⃣ Get Logged-in User**
 
@@ -126,21 +129,15 @@ query {
 
 }
 ```
-![gtme](https://github.com/user-attachments/assets/12ed6693-755b-4e6e-a0b7-f865b0c0c909)
+![gtme](https://github.com/user-attachments/assets/1544f875-62f7-4392-aaf9-3f28c9ee5071)
+
 
 🔹 Requires `Authorization: Bearer <JWT_TOKEN>` in the request header.
+
 
 ---
 
 ## **✅ Running Tests**
-
-### **🧚 Unit Tests**
-
-Run all unit tests:
-
-```bash
-npm run test
-```
 
 � End-to-End (E2E) Tests**
 
@@ -148,12 +145,6 @@ npm run test
 npm run test:e2e
 ```
 ### **�
-
-🔹 **Test Coverage**
-
-```bash
-npm run test:cov
-```
 
 ---
 
