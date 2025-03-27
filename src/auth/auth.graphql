@@ -1,0 +1,19 @@
+type Auth {
+  # Example field (placeholder)
+  access_token: String
+}
+
+input LoginAuthInput {
+  # Example field (placeholder)
+  email: String
+  password: String
+}
+
+input BiometricAuthInput {
+  biometricKey: String!
+}
+
+type Mutation {
+  login(loginAuthInput: LoginAuthInput!): Auth!
+  biometric(biometricAuthInput: BiometricAuthInput!): Auth!
+}

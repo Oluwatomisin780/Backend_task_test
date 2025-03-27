@@ -1,0 +1,38 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: oluwatomisin
+      POSTGRES_PASSWORD: postgres123
+      POSTGRES_DB: backend
+    container_name: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    networks:
+      - nestjs
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nestjs_task_test
+    restart: always
+    environment:
+      - PORT=3000
+      - DATABASE_URL=postgresql://oluwatomisin:postgres123@db:5432/backend
+      - NODE_ENV=production
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+    networks:
+      - nestjs
+
+volumes:
+  postgres_data:
+
+networks:
+  nestjs:

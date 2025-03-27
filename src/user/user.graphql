@@ -1,0 +1,32 @@
+scalar DateTime
+
+type User {
+  # Example field (placeholder)
+  id: Int!
+  email: String!
+  password: String!
+  biometricKey: String
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+input CreateUserInput {
+  # Example field (placeholder)
+  email: String!
+  password: String!
+  biometricKey: String
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+type Query {
+  user(email: String!): User
+}
+
+type Query {
+  getMe: User!
+}
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput!): User!
+}
