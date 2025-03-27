@@ -8,6 +8,7 @@ import { UserModule } from './user/user.module';
 import { GraphQLDateTime } from 'graphql-scalars';
 import { PrismaModule } from './prisma/prisma.module';
 import { AuthModule } from './auth/auth.module';
+import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
@@ -24,6 +25,7 @@ import { AuthModule } from './auth/auth.module';
     UserModule,
     PrismaModule,
     AuthModule,
+    ConfigModule.forRoot(),
   ],
   controllers: [AppController],
   providers: [AppService],

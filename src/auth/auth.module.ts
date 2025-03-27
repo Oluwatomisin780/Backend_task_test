@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { AuthResolver } from './auth.resolver';
 import { UserModule } from '../user/user.module';
-import { JwtModule, JwtService } from '@nestjs/jwt';
+import { JwtModule } from '@nestjs/jwt';
 
 @Module({
   imports: [
@@ -11,7 +11,7 @@ import { JwtModule, JwtService } from '@nestjs/jwt';
       signOptions: {
         expiresIn: '1h',
       },
-      secret: 'some-secret',
+      secret: process.env.JWT_SECRET,
     }),
   ],
   providers: [AuthResolver, AuthService],
